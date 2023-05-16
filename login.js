@@ -18,14 +18,14 @@ app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
 
-const connection = mysql.createConnection({
+const connection = mysql.createPool({
     host:process.env.HOST,
     user:process.env.USER,
     database:process.env.DATABASE,
     password:process.env.PASSWORD
 });
 
-connection.connect((e) => {
+connection.getConnection((e) => {
     if(e) throw e
     else console.log("Connected")
 })
@@ -97,7 +97,7 @@ app.get("/favorite_place", authCheck, (req, res) => {
     res.sendFile(__dirname + "/pages/favorite_place.html")
 })
 
-app.post("/favorite_place",authCheck || verifyToken, (req, res) => {
+app.post("/favorite_place",authCheck || verifyToken,async (req, res) => {
     const email = req.session.email || req.user.emails[0].value;
     const favorite_place = req.body.favorite_place;
 
@@ -107,7 +107,7 @@ app.post("/favorite_place",authCheck || verifyToken, (req, res) => {
     })
 })
 
-app.get("/weather",authCheck ||  verifyToken ,  (req,res) => {
+app.get("/weather",authCheck ||  verifyToken , async (req,res) => {
     //res.sendFile(__dirname + "/index.html")
     const email = req.session.email || req.user.emails[0].value;
     const name = email.split('@')
@@ -136,7 +136,7 @@ app.get('/auth/google/callback',
 })
 })
 
-app.post("/signup", encoder, (req,res) => {
+app.post("/signup", encoder, async (req,res) => {
     var username = req.body.username;
     var email = req.body.email;
     var password = req.body.password;
