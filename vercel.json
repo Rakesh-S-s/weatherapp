@@ -13,10 +13,9 @@
         }
     ],
     "public": {
-        "staticRoutes": {
-          "/images": "images",
-          "/pages": "pages",
-          "/assets": "assets"
-        }
+        "/images": { "source": "images" },
+        "/public": { "source": "public" },
+        "/pages": { "source": "pages" },
+        "/assets": { "source": "assets" }
       }
 }
