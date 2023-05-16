@@ -17,6 +17,7 @@ app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
 
 app.set('view engine', 'ejs');
+app.set("views", __dirname + "/views");
 
 const connection = mysql.createPool({
     host:process.env.HOST,

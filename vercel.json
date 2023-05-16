@@ -11,5 +11,12 @@
             "src": "/(.*)",
             "dest":"/"
         }
-    ]
+    ],
+    "public": {
+        "staticRoutes": {
+          "/images": "images",
+          "/pages": "pages",
+          "/assets": "assets"
+        }
+      }
 }
