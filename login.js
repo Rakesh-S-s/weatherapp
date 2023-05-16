@@ -108,7 +108,7 @@ app.post("/favorite_place",authCheck || verifyToken,async (req, res) => {
     })
 })
 
-app.get("/weather",authCheck ||  verifyToken , async (req,res) => {
+app.get("/weather", async (req,res) => {
     //res.sendFile(__dirname + "/index.html")
     const email = req.session.email || req.user.emails[0].value;
     const name = email.split('@')
