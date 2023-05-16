@@ -2,14 +2,14 @@
     "version": 2,
     "builds":[
         {
-            "src": "./login.js",
+            "src": "login.js",
             "use": "@vercel/node"
         }
     ],
     "routes": [
         {
             "src": "/(.*)",
-            "dest":"/"
+            "dest":"/login.js"
         }
     ]
 }
