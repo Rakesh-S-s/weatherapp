@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Weather</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="/logout" class="login-btn" style="text-decoration: none;">Logout</a>
+        </nav>
+        <h3 id="demo"></h3>
+        <h1> Weather </h1>
+        <img src="./images/cloud.png"/>
+        <form id="form">
+            <input placeholder="Enter the city" type="text" name="city" id="city" autocomplete="off" autocapitalize="on" autofocus="on"/>
+            <input type="submit" id="btn" value="Get">
+        </form>
+        <h1 id="loc" style="visibility: hidden">Location</h1>
+        <div class="forecast" id="forecast" style="visibility: hidden">
+            <div class="card">
+                <div id="iconsContainer">
+                    <div class="icons">
+                        <h4 class="weather" id="day1"></h4>
+                        <div class="image">
+                            <img src="dots.png" class="imgClass" id="img1" alt="">
+                        </div>
+                        <p class="minValues" id="day1Min">...</p>
+                        <p class="maxValues" id="day1Max">...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div id="iconsContainer">
+                    <div class="icons">
+                        <h4 class="weather" id="day2"></h4>
+                        <div class="image">
+                            <img src="dots.png" class="imgClass" id="img2">
+                        </div>
+                        <p class="minValues" id="day2Min">...</p>
+                        <p class="maxValues" id="day2Max">...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div id="iconsContainer">
+                    <div class="icons">
+                        <h4 class="weather" id="day3"></h4>
+                        <div class="image">
+                            <img src="dots.png" class="imgClass" id="img3">
+                        </div>
+                        <p class="minValues" id="day3Min">...</p>
+                        <p class="maxValues" id="day3Max">...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div id="iconsContainer">
+                    <div class="icons">
+                        <h4 class="weather" id="day4"></h4>
+                        <div class="image">
+                            <img src="dots.png" class="imgClass" id="img4">
+                        </div>
+                        <p class="minValues" id="day4Min">...</p>
+                        <p class="maxValues" id="day4Max">...</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div id="iconsContainer">
+                    <div class="icons">
+                        <h4 class="weather" id="day5"></h4>
+                        <div class="image">
+                            <img src="dots.png" class="imgClass" id="img5">
+                        </div>
+                        <p class="minValues" id="day5Min">...</p>
+                        <p class="maxValues" id="day5Max">...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./public/weatherstack.js"></script>
+</body>
+</html>
