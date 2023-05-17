@@ -7,10 +7,6 @@
         }
     ],
     "routes": [
-        
-        {
-            "src":"/signup.html", "dest":"./pages/signup.html"
-        },
         {
             "src": "/(.*)",
             "dest":"/"
