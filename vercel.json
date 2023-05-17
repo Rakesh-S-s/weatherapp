@@ -4,7 +4,14 @@
         {
             "src": "login.js",
             "use": "@vercel/node"
-        }
+        },
+    {
+      "src": "views/**/*.ejs",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "views"
+      }
+    }
     ],
     "routes": [
         {
