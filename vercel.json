@@ -9,13 +9,7 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest":"/login.js"
+            "dest":"/"
         }
-    ],
-    "public": {
-        "/images": { "source": "images" },
-        "/public": { "source": "public" },
-        "/pages": { "source": "pages" },
-        "/assets": { "source": "assets" }
-      }
+    ]
 }
