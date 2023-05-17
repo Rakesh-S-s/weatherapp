@@ -141,7 +141,7 @@ app.post("/signup", encoder, async (req,res) => {
     var username = req.body.username;
     var email = req.body.email;
     var password = req.body.password;
-    connection.query("insert into users(username, email, password) values(?,?,?)",[username, email, password]);
+    await connection.query("insert into users(username, email, password) values(?,?,?)",[username, email, password]);
     res.redirect('/');
     res.end();
 })
