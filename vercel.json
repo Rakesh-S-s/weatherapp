@@ -9,10 +9,10 @@
     "routes": [
         {
             "src": "/(.*)",
-            "dest":"/login.js"
+            "dest":"/"
         },
         {
-            "src":"signup.html", "dest":"./pages/signup.html"
+            "src":"/signup.html", "dest":"./pages/signup.html"
         }
     ]
 }
