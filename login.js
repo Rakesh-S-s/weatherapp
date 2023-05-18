@@ -8,10 +8,11 @@ const jwt = require('jsonwebtoken')
 const passport = require("passport")
 require("dotenv").config()
 require("./auth")
-app.use("/images", express.static("images"))
-app.use("/public", express.static("public"))
-app.use("/pages", express.static("pages"))
-app.use("/assets", express.static("assets"))
+
+app.use(express.static("images"))
+app.use(express.static("public"))
+app.use(express.static("pages"))
+app.use(express.static("assets"))
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
