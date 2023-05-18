@@ -158,8 +158,8 @@ app.get("/logout", (req, res)=>{
 })
 
 app.get("/check",async (req,res)=>{
-    await connection.query("select * from users",(err,results)=>{
-        res.json({details: results[0]})
+    connection.query("select * from users",(err,results)=>{
+        res.json({details: results})
     })
 })
 
