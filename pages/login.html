@@ -152,10 +152,19 @@ img{
             <input type="email" name="email" placeholder="Email..." autocomplete="off" required/>
             <input type="password" name="pass" placeholder="Password..." autocomplete="off" required/>
             <input type="submit" class="login-btn" value="Login"/>
-            <p>Don't have an account yet? <a href="signup.html">Signup</a></p>
+            <p>Don't have an account yet? <a href="../pages/signup.html">Signup</a></p>
             <a href="/auth/google">Google login</a>
         </form>
     </div>
-
+    <div class="container">
+        <h1>Sign up</h1>
+        <form action="/signup" method="POST" class="login">   
+            <input type="text" name="username" placeholder="Name..." autocomplete="off" required/>
+            <input type="email" name="email" placeholder="Email..." autocomplete="off" required/>
+            <input type="password" name="password" placeholder="Password..." autocomplete="off" required/>
+            <input type="submit" class="login-btn" value="Sign up"/>
+            <p>Already have an Account? <a href="../pages/login.html">Login</a></p>
+        </form>
+    </div>
 </body>
 </html>
