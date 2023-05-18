@@ -9,10 +9,10 @@ const passport = require("passport")
 require("dotenv").config()
 require("./auth")
 
-app.use(express.static("images"))
-app.use(express.static("public"))
-app.use(express.static("pages"))
-app.use(express.static("assets"))
+app.use("/images",express.static("images"))
+app.use("/public",express.static("public"))
+app.use("/pages",express.static("pages"))
+app.use("/assets",express.static("assets"))
 
 app.use(bodyParser.urlencoded({extended: true}))
 app.use(bodyParser.json());
@@ -145,7 +145,7 @@ app.post("/signup", encoder, async (req,res) => {
     var username = req.body.username;
     var email = req.body.email;
     var password = req.body.password;
-    await connection.query("insert into users(username, email, password) values(?,?,?)",[username, email, password]);
+    connection.query("insert into users(username, email, password) values(?,?,?)",[username, email, password]);
     res.redirect('/');
     res.end();
 })
@@ -157,8 +157,8 @@ app.get("/logout", (req, res)=>{
     res.redirect("/")
 })
 
-app.get("/check",(req,res)=>{
-    connection.query("select * from users",(err,results)=>{
+app.get("/check",async (req,res)=>{
+    await connection.query("select * from users",(err,results)=>{
         res.json({details: results[0]})
     })
 })
