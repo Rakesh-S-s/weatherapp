@@ -4,8 +4,146 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../assets/style.css">
+    <!-- <link rel="stylesheet" href="../assets/style.css"> -->
     <title>Favorite Place</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&family=Cinzel:wght@600&family=Poppins:wght@300;400;500;800&display=swap');
+*{
+    margin:0px;
+    border:0px;
+    font-family: 'Poppins', sans-serif;
+    background-color: aliceblue;
+    
+}
+.container{
+   display: flex;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   height: 100vh;
+   position: relative;  
+}
+.profile{
+    position: absolute;
+    top: 40px;
+    left:60px;
+}
+.nav-bar{
+    position: absolute;
+    top:40px;
+    right:65px;
+}
+nav .login-btn{
+    color:black;
+    font-size: 13px;
+    padding:15px 20px; 
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border-radius: 25px;
+    border:2px solid rgb(142, 139, 139);
+}
+nav .login-btn:hover{
+    border:3px solid rgb(255, 50, 50);
+}
+.fav{
+    position: absolute;
+    top: 8%;
+    left:20px;
+}
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.login{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.login-btn{
+    width: 7rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+.login-btn:hover{
+    border: 2px solid greenyellow;
+}
+.login-btn:active{
+    box-shadow: 2px 2px 10px 2px rgb(95, 93, 93);
+}
+
+#btn{
+    margin:0px;
+    width: 6rem;
+    padding:10px;
+    height: 3.5rem;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+#btn:hover{
+    border: 3px solid greenyellow;
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+}
+#btn:active{
+    box-shadow: 2px 2px 10px 2px rgb(95, 93, 93);
+}
+#loc{
+    font-weight: 500;
+    margin-top:10px;
+    margin-bottom:0px;
+    border: 0px;
+    font-size: 35px;
+}
+h1{
+    margin-top:50px;
+    font-size:55px;
+}
+input{
+    background: white;
+    border: 2px solid rgb(142, 139, 139);
+    margin: 25px;
+    padding:15px 20px;
+    width: 18rem;
+    border-radius: 25px;
+    font-size: 14px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+.weather, .image, .minValues, .maxValues, .imgClass{
+    background-color: white;
+}
+.icons{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.forecast{
+    display: flex;
+}
+.card{
+    margin:40px;
+    background-color: white;
+    padding:30px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+h3{
+    background-color: white;
+}
+h2{
+    margin-bottom:20px;
+}
+span{
+    font-weight: 400;
+    background-color: white;
+}
+img{
+    width: 100px;
+    height: 100px;
+}
+    </style>
 </head>
 <body>
     <div class="container">
